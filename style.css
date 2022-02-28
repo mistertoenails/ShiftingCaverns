@@ -1,0 +1,17 @@
+canvas{
+    
+    border-style: solid;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+}
+html{
+  background-color: black
+}
+@font-face {
+    font-family: pixels;
+    src: url('./ARCADECLASIC.TTF');
+}

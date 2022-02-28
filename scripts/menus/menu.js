@@ -1,0 +1,68 @@
+class Menu extends Phaser.Scene{
+  constructor(){
+    super('menu')
+  }
+  preload(){
+  this.load.spritesheet('title', 'assets/menus/title.png', {
+     frameWidth:126 , 
+     frameHeight:63,
+   }) 
+   this.load.spritesheet('play', 'assets/menus/play.png', {
+     frameWidth: 64, 
+     frameHeight: 64
+   })
+  }
+pause(){
+  this.scene.launch('inventory')
+  this.scene.pause(this.scene.key)
+  
+}
+  create(){
+      this.anims.create({
+        key: "title", 
+        frames: this.anims.generateFrameNumbers('title'),
+        frameRate: 4,
+        repeat: -1
+      })
+      this.anims.create({
+      key: 'play',
+      frames: this.anims.generateFrameNumbers('play'),
+      frameRate: 20,
+      repeat: -1
+      
+    })
+ this.title = this.add.sprite(config.width/2, config.height/2, 'title').setScale(10).setPipeline('Light2D');
+ this.title.play('title')
+this.play = this.add.sprite(config.width/2, config.height/2 + 190
+, 'play').setScale(5).play('play').setPipeline('Light2D');
+    var light  = this.lights.addLight(this.play.x, this.play.y, 20000);
+  var light2 = this.lights.addLight(config.width/2 - 60, config.height/2 - 80, 800)
+  var light3  = this.lights.addLight(this.play.x + 85, this.play.y - 65, 400);
+
+
+//EDIT THESE NUMBERS               X     Y
+//                                 ↓     ↓
+var light4 = this.lights.addLight( 0,    0, 65, 400)  
+
+//EDIT THESE NUMBERS               X     Y
+//                                 ↓     ↓
+var light5 = this.lights.addLight( 0,    0, 65, 400)  
+
+
+
+    this.lights.enable()
+this.play.setInteractive();
+
+this.play.on('pointerdown', ()=>{
+  this.play.removeInteractive()
+addNewRoom(0, 0,  this)
+
+this.cameras.main.fadeOut(1000, 0, 0, 0)
+	this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) => {
+		this.scene.start('x0y0')
+	})
+
+
+});
+  }
+}

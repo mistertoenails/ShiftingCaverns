@@ -1,0 +1,27 @@
+   SCRIPTS
+
+Script.js: contains the config file and the addNewRoom function
+filepath: scripts/general/script.js
+
+Menu.js: the menu for the game
+filepath: scripts/menus/menu.js
+
+Phaser.min.js the phaser library. No need to do anything there.
+filepath: scripts/general/phaser.min.js
+
+roomGen.js: the room generator, adds the doors and assets
+filepath: scripts/calculations/roomGen.js
+
+roomCalculations.js: calculates what type of room the new room should be by checking the area the room falls into.
+filepath: scripts/calculations/roomCalculations.js
+
+parseCoordinates.js: parses the coordinates of the room from the scene key 
+filepath: scripts/calculations/roomCalculations.js
+
+  FRONTEND FILES
+
+index.html: the html page for the game
+filepath: N/A
+
+style.css: the css styling for the page
+filepath: N/A

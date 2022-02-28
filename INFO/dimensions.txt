@@ -1,0 +1,15 @@
+The canvas is 1260 by 630
+//126 63
+The wall that goes on the longer sides needs to taper off  for the door going completely blank at 555, and start back at 705
+
+the shorter, vertical side needs to be completely blank at 240, and come back at 390
+
+The walls all need to be 20 pixels wide
+
+The space we have to work with after the walls is 1220 by 590
+
+Top/bottom walls: 1260 x 20
+
+Left/right walls: 20 x 630
+
+item icons are 128 by 88

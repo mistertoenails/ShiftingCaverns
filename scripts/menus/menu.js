@@ -3,6 +3,7 @@ class Menu extends Phaser.Scene{
     super('menu')
   }
   preload(){
+    this.load.audio('theme', 'assets/sound/title_theme.wav')
   this.load.spritesheet('title', 'assets/menus/title.png', {
      frameWidth:126 , 
      frameHeight:63,
@@ -18,6 +19,8 @@ pause(){
   
 }
   create(){
+    this.music = this.sound.add("theme", { loop: true });
+    this.music.play();
       this.anims.create({
         key: "title", 
         frames: this.anims.generateFrameNumbers('title'),
@@ -56,8 +59,13 @@ this.play.setInteractive();
 this.play.on('pointerdown', ()=>{
   this.play.removeInteractive()
 addNewRoom(0, 0,  this)
-
-this.cameras.main.fadeOut(1000, 0, 0, 0)
+  this.tweens.add({
+        targets:  this.music,
+        volume:   0,
+        duration: 3000
+    });
+  setTimeout(()=>{this.music.stop()}, 3000)
+this.cameras.main.fadeOut(3000, 0, 0, 0)
 	this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) => {
 		this.scene.start('x0y0')
 	})

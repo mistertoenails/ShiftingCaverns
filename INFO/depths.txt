@@ -1,0 +1,7 @@
+Floors: depth 1
+Walls: depth 2
+Non-interactible props(lanterns, rocks, etc): depth 3
+Interactible props(chests): depth 4
+Player: depth 5
+Particle effects: depth 6
+Popup menus and bottom HUD: depth 7

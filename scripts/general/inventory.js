@@ -11,13 +11,13 @@ function addScroll(itemConfig){
 var inventory = {
 
 healing: {
-slot_1: {},
-slot_2: {},
-slot_3: {}  
+"slot_1": {},
+"slot_2": {},
+"slot_3": {}  
 },
 weapons: {
-slot_1: {},
-slot_2: {}  
+"slot_1": {},
+"slot_2": {}  
 },
 scroll: {},
 openBools: {
